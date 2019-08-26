@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@font-face {font-family:'qanelassoft';src:url('qanelassoft.woff2')format('woff2'),url('qanelassoft.woff')format('woff');font-weight:normal;font-style:normal;}
+
+@keyframes fadeInFromLeft {
+    from { transform: translateX(-10%); opacity: 0; }
+    to   { transform: translateX(0);    opacity: 1; }
+}
+
+.fade-in-from-left { animation: 3s cubic-bezier(0.19, 1, 0.22, 1) 0s fadeInFromLeft; }
+
+@keyframes fadeInFromRight {
+    from { transform: translateX(10%); opacity: 0; }
+    to   { transform: translateX(0);   opacity: 1; }
+}
+
+.fade-in-from-right { animation: 3s cubic-bezier(0.19, 1, 0.22, 1) 0s fadeInFromRight; }
+
+:root {
+    --theme-primary: #2e54ff;
+    --theme-secondary: #020045;
+    --primary-colour: #2e54ff;
+    --secondary-colour: #020045;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    font-family: qanelassoft, cursive;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.logofloat { color: #2e54ff; }
+
+.nav-li, .nav-a, .nav-button {
+    font-family: qanelassoft, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-afloat {
+    color: #020045;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    transition: .2s;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.headerfloat {
+    box-shadow: 0 8px 8px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.nav-ul {
+    list-style: none;
+}
+
+.nav-ul .nav-li {
+    display: inline-block;
+    padding: 0 12px;
+}
+
+.nav-ul .nav-li .nav-a {
+    transition: .2s;
+}
+
+.nav-ul .nav-li .nav-a:hover {
+    color: #2e54ff;
+}
+
+.nav-button {
+    color: white;
+    background-color: transparent;
+    padding: 10px 16px;
+    border: 2px solid white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.nav-buttonfloat {
+    color: #2e54ff;
+    border-color: #2e54ff;
+}
+
+.nav-button:hover, .nav-button:focus {
+    background-color: #2e54ff;
+    color: white;
+    border-color: #2e54ff;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("bloor_ci.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-content h1 {
+    font-size: 96px;
+    font-family: qanelassoft;
+    text-align: center;
+}
+
+section { height: 100vh; }
+
+.section-content {
+    font-family: Montserrat;
+}
+
+.login-form input[type="text"], input[type="password"] {
+    width: 300px;
+    display: flex;
+    margin: 24px auto;
+    padding: 12px;
+    border-color: transparent;
+    font-family: Montserrat, sans-serif;
+    border-radius: 8px;
+    background: #ededed;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+}
+
+p {
+    font-family: Montserrat;
+    text-align: justify;
+    word-break: break-word;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.login-form input[type="text"]:hover, input[type="password"]:hover, input[type="text"]:focus, input[type="password"]:focus {
+    padding: 16px;
+    font-weight: bold;
+    background: white;
+    border: 2px solid var(--primary-colour);
+}
+
+.login-form button[type="submit"] {
+    margin: 0 auto;
+    width: 328px;
+    padding: 12px;
+    display: block;
+    border: 2px solid var(--primary-colour);
+    font-family: Montserrat, sans-serif;
+    color: var(--primary-colour);
+    border-radius: 8px;
+    background: transparent;
+    font-weight: bolder;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+}
+
+.login-form button[type="submit"]:hover, button[type="submit"]:focus {
+    color: white;
+    background: var(--primary-colour);
+}
+
+.login-h1 {
+    font-size: 48px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    margin-top: 0;
+}
+
+.login-body {
+    background: linear-gradient(to bottom right, var(--primary-colour), var(--secondary-colour)) no-repeat center center fixed;
+    background-size: cover;
+    transition: .2s;
+}
+
+.card {
+    background-color: white;
+    padding: 48px 0;
+    width: 400px;
+    border-radius: 24px;
+    margin: 96px auto;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.theme-selector {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-selector button {
+    margin: 4px;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    background-color: var(--theme-primary);
+    border-radius: 50%;
+    border: 1px solid var(--theme-primary);
+    box-shadow: 0 6px 6px rgba(0,0,0,0.30), 0 8px 8px rgba(0,0,0,0.22);
+}
