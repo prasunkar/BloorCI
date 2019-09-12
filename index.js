@@ -1,5 +1,5 @@
 $(document).scroll( () => {
-    if ($(document).scrollTop() >= 50) {
+    if ($(document).scrollTop() >= 120) {
         $('.navbar').addClass('headerfloat');
         $('.logo').addClass('logofloat');
         $('.nav-a').addClass('nav-afloat');
@@ -12,3 +12,17 @@ $(document).scroll( () => {
         $('.nav-button').removeClass('nav-buttonfloat');
     }
 });
+
+var prevScrollPos = window.pageYOffset;
+var window = $(window);
+
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    var navBar = document.getElementById("navbar");
+    if (prevScrollPos > currentScrollPos) {
+        navBar.style.top = "0";
+    } else {
+        navBar.style.top = "-65px";
+    }
+    prevScrollPos = currentScrollPos;
+}

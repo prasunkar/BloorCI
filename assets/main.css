@@ -2,24 +2,48 @@
 @font-face {font-family:'qanelassoft';src:url('qanelassoft.woff2')format('woff2'),url('qanelassoft.woff')format('woff');font-weight:normal;font-style:normal;}
 
 @keyframes fadeInFromLeft {
-    from { transform: translateX(-10%); opacity: 0; }
+    from { transform: translateX(-128px); opacity: 0; }
     to   { transform: translateX(0);    opacity: 1; }
 }
 
-.fade-in-from-left { animation: 3s cubic-bezier(0.19, 1, 0.22, 1) 0s fadeInFromLeft; }
+.fade-in-from-left { animation: 1.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s fadeInFromLeft; }
 
 @keyframes fadeInFromRight {
-    from { transform: translateX(10%); opacity: 0; }
+    from { transform: translateX(128px); opacity: 0; }
     to   { transform: translateX(0);   opacity: 1; }
 }
 
-.fade-in-from-right { animation: 3s cubic-bezier(0.19, 1, 0.22, 1) 0s fadeInFromRight; }
+.fade-in-from-right { animation: 1.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s fadeInFromRight; }
+
+@keyframes fadeInFromBottom {
+    from { transform: translateY(128px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in-from-bottom {
+    animation: 1.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s fadeInFromBottom;
+    animation-fill-mode: both;
+}
 
 :root {
     --theme-primary: #2e54ff;
     --theme-secondary: #020045;
     --primary-colour: #2e54ff;
     --secondary-colour: #020045;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2e54ff;
 }
 
 * {
@@ -110,7 +134,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("bloor_ci.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent), url("bloor_ci.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -120,13 +144,21 @@ header {
 .hero-content h1 {
     font-size: 96px;
     font-family: qanelassoft;
-    text-align: center;
+    font-family: qanelassoft;
 }
 
 section { height: 100vh; }
 
 .section-content {
     font-family: Montserrat;
+    text-align: center;
+}
+
+.section-content h1 {
+    margin: 24px 0 0 5%;
+    font-size: 48px;
+    font-family: qanelassoft;
+    color: #2e54ff;
 }
 
 .login-form input[type="text"], input[type="password"] {
@@ -146,7 +178,7 @@ section { height: 100vh; }
 
 p {
     font-family: Montserrat;
-    text-align: justify;
+    text-align: center;
     word-break: break-word;
     width: 90%;
     margin: 0 auto;
@@ -203,6 +235,10 @@ p {
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
+.card h1 {
+    font-size: 24px;
+}
+
 .theme-selector {
     position: fixed;
     bottom: 12px;
@@ -220,4 +256,12 @@ p {
     border-radius: 50%;
     border: 1px solid var(--theme-primary);
     box-shadow: 0 6px 6px rgba(0,0,0,0.30), 0 8px 8px rgba(0,0,0,0.22);
+}
+
+/* ALL MOBILE DEVICES */
+
+@media only screen and (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 64px;
+    }
 }
