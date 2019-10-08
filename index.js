@@ -1,5 +1,5 @@
 $(document).scroll( () => {
-    if ($(document).scrollTop() >= 120) {
+    if ($(document).scrollTop() >= 150) {
         $('.navbar').addClass('headerfloat');
         $('.logo').addClass('logofloat');
         $('.nav-a').addClass('nav-afloat');

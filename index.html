@@ -6,8 +6,6 @@
     <link href="assets/main.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" integrity="sha256-MHZlm8KTLRxClmwQTYIfJEVbcRx1VIgfZJjaBOGCDoc=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js" integrity="sha256-Lw96aZrbaAuj9vBh9haoZrkYmRA9Rbkv4K6C8LonvBk=" crossorigin="anonymous"></script>
     <title>Bloor CI</title>
 </head>
 <body>
@@ -15,7 +13,16 @@
         <h1 class="logo">Bloor CI</h1>
         <nav>
             <ul class="nav-ul">
-                <!-- None for now -->
+                <li class="nav-li dropdown-li"><a class="nav-a">Quick Links</a>
+                    <ul class="dropdown">
+                        <li><a href="https://sites.google.com/tdsb.on.ca/bcimath/home" target="_blank">BCI Math</a></li>
+                        <li><a href="https://sites.google.com/tdsb.on.ca/bcicomputerscience" target="_blank">BCI Comp. Science</a></li>
+                        <li><a href="https://sites.google.com/tdsb.on.ca/bcisocialscience" target="_blank">BCI Social Sciences</a></li>
+                        <li><a href="https://sites.google.com/tdsb.on.ca/bloor-ci-library/home" target="_blank">BCI Library</a></li>
+                        <li><a href="https://sites.google.com/tdsb.on.ca/bcifamilystudies/home" target="_blank">BCI Family Studies</a></li>
+                        <!-- TODO: Find URL for BCI Guidance and add it to the dropdown menu. -->
+                    </ul>
+                </li>
             </ul>
         </nav>
         <a href="#"><button class="nav-button">Contact Us</button></a>
@@ -24,22 +31,36 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <h1 class="title fade-in-from-left" style="color:white;">Welcome to</h1>
-                <h1 class="title fade-in-from-right" style="color:var(--primary-colour);">Bloor CI</h1>
+                <h1 class="fade-in-from-left" style="color:white;">Welcome to</h1>
+                <h1 class="fade-in-from-right" style="color:var(--secondary-colour);">Bloor CI</h1>
             </div>
         </section>
 
         <!-- Info Section -->
         <section>
             <div class="section-content">
-                <img src="assets/bloor_logo.png" height="128" width="128" style="margin: 48px 0 56px 0">
-                <p>Bloor Collegiate Institute is a high school found in the heart of Bloordale, Toronto.</p>
+                <img src="assets/bloor_logo.png" height="128" width="128" style="margin:24px">
+                <p>Bloor Collegiate Institute is a high school located at the intersection of Bloor St. and Dufferin St. It is home to ~850 brilliant students, working hard every day to make themselves and Bloor Collegiate Institute a name in the academic world.
+                    <br>
+                    <br>
+                    Bloor CI is home to the TOPS (Talented Offerings in the Programmes of the Sciences) program. To learn more about it, click <a class="link" href="https://sites.google.com/tdsb.on.ca/topsonbloor" target="_blank">here</a>.
+                </p>
             </div>
         </section>
-
-        <!-- Programs Section -->
-
-        <!-- Contact Section -->
-    </div>
+        <!-- TODO: Add a programs section. -->
+        <!--
+        <section>
+            <div class="section-content">
+                <h1>TOPS On Bloor</h1>
+            </div>
+        </section>
+        -->
+        <!-- TODO: Add a contact section. -->
+    </div>\
+    <footer>
+        <div class="social-links">
+            <!-- TODO: Add social links in the footer. -->
+        </div>
+    </footer>
 </body>
 </html>
