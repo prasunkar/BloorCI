@@ -25,4 +25,13 @@ window.onscroll = function() {
         navBar.style.top = "-65px";
     }
     prevScrollPos = currentScrollPos;
+};
+
+// Submit email through form
+function sendEmail() {
+    var emailSubject = document.getElementById("email-subject").value;
+    var emailBody = document.getElementById("email-body").value;
+    var emailButton = document.getElementById("email-button");
+
+    emailButton.href = `mailto:Bloor@tdsb.on.ca?subject=${emailSubject}&body=${emailBody}`;
 }

@@ -6,6 +6,7 @@
     <link href="assets/main.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/430fce7b42.js" crossorigin="anonymous"></script>
     <title>Bloor CI</title>
 </head>
 <body>
@@ -20,12 +21,12 @@
                         <li><a href="https://sites.google.com/tdsb.on.ca/bcisocialscience" target="_blank">BCI Social Sciences</a></li>
                         <li><a href="https://sites.google.com/tdsb.on.ca/bloor-ci-library/home" target="_blank">BCI Library</a></li>
                         <li><a href="https://sites.google.com/tdsb.on.ca/bcifamilystudies/home" target="_blank">BCI Family Studies</a></li>
-                        <!-- TODO: Find URL for BCI Guidance and add it to the dropdown menu. -->
+                        <!-- TODO: Find URL for BCI Guidance & BCI DECA and add it to the dropdown menu. -->
                     </ul>
                 </li>
             </ul>
         </nav>
-        <a href="#"><button class="nav-button">Contact Us</button></a>
+        <a href="#contact"><button class="nav-button button-bold">Contact Us</button></a>
     </header>
     <div class="content">
         <!-- Hero Section -->
@@ -55,11 +56,23 @@
             </div>
         </section>
         -->
-        <!-- TODO: Add a contact section. -->
-    </div>\
+
+        <section id="contact">
+            <div class="section-content">
+                <h1>Contact Us</h1>
+                <div class="form">
+                    <a href="tel:+1-416-393-1420"><button class="button-bold" style="margin-bottom:36px;">Call Us</button></a>
+                    <input type="text" placeholder="Subject" id="email-subject" style="margin:0;border-bottom:0;border-radius:8px 8px 0 0;">
+                    <textarea placeholder="Body" rows="8" id="email-body" style="border-radius:0;margin:0;"></textarea>
+                    <a href="" id="email-button"><button class="button-bold" onclick="sendEmail()" style="border-top:0;border-radius:0 0 8px 8px;">Submit Email</button></a>
+                </div>
+            </div>
+        </section>
+    </div>
     <footer>
         <div class="social-links">
-            <!-- TODO: Add social links in the footer. -->
+            <a href="https://twitter.com/bloorci?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/bloorci/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 </body>
